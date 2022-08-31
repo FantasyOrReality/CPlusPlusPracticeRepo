@@ -5,7 +5,20 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    int FunnyNumber = 69;
+    float FunnyNumberButNot = 6.9f;
+    char AlmostAFunnyNumber = 'S';
+
+
+    std::cout << "Roses are red\n"
+        << "Violets are blue\n"
+        << "Whatever you do,\n"
+        << "Don't look behind you\n"
+        << FunnyNumber <<"\n"
+        <<FunnyNumberButNot <<"\n"
+        <<AlmostAFunnyNumber;
+
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
