@@ -4,8 +4,10 @@
 #include <iostream>
 #include<string>
 
+
 int main()
 {
+    /*
     int TestInt = 69;
     float TestFloat = 6.9f;
     char TestChar = 'S';
@@ -63,9 +65,9 @@ int main()
 
 
 
-
+  /*
     //Input
-    std::cout << "Your address is known by the FBI";
+    std::cout << "Your address is known by the FBI.\n";
     std::string entryString = "";
 
     //std::cin >> is used for input
@@ -92,6 +94,30 @@ int main()
     std::cin >> entryFloat;
     std::cout << "You typed " << entryFloat << "!\n";
 
+    //By default cin only gets text up to the first space
+    //You can get a whole line of text (including spaces)
+    std::string lineOfText;
+    std::cout << "You are on a watchlist.\n";
+    std::getline(std::cin, lineOfText);
+    std::cout << "You typed " << lineOfText << "!\n";
+    */
+
+
+    //Selection
+    bool decision = true
+        if (decision == true)
+        {
+            std::cout << "decision was true!\n";
+        }
+        else
+        {
+            std::cout << "decision was false!\n";
+        }
+
+    //Advanced if statement: Ternary
+    //Written in-line with other code, such as an assignment statement.
+    //It results in one or two values being set
+    int (TernResult) = 
 
 }
 
