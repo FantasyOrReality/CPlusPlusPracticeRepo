@@ -29,9 +29,6 @@ int main()
     std::cout << "!\n";
 
 
-
-
-
     //Q2:Strings: Code Word Locater. Store a codeword as a string variable. Create a longer string variable that contains the codeword. Search for the codeword in the string, 
     //and print out it's position in the string.
 
