@@ -116,8 +116,9 @@ int main()
 
     //Advanced if statement: Ternary
     //Written in-line with other code, such as an assignment statement.
-    //It results in one or two values being set
-    int (TernResult) = 
+    //It results in one or two values being based on the condition
+
+    int TernResult = (decision ? 1 : 2);
 
 }
 
