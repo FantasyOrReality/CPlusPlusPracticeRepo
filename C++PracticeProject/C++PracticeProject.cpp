@@ -74,6 +74,25 @@ int main()
     std::cout << "You typed " << entryString << "!\n";
 
 
+
+    //we can also input to things that aren't strings
+    int entryInt=0;
+    std::cout<< "Please enter a whole number. \n";
+    std::cin >> entryInt;
+    std::cout << "You typed " << entryInt << "!\n";
+
+    //NOTE: If they enter something other than an int, the input will not
+    //"consume" the entry. This means it will be used again the next time
+    //that cin is used - thus probably breaking your program. We should use 
+    //data validation
+
+    //We can use floats as well
+    float entryFloat = 0.0f;
+    std::cout <<"Please enter a whole number. \n";
+    std::cin >> entryFloat;
+    std::cout << "You typed " << entryFloat << "!\n";
+
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
