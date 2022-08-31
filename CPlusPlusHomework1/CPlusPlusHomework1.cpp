@@ -9,6 +9,27 @@ int main()
 {
     
     //Q1: Variables: Rectangle Info.  Find the perimeter and area of a rectangle, given the length and width. Store each value as a variable, and print the results to the console.
+    //Variables
+    int Length = 2;
+    int Width = 1;
+    int Perimeter = 0;
+
+    //Calculations
+    Perimeter = (2 * Length) + (2 * Width);
+
+    //Output
+    std::cout << "The length of the rectangle is "; 
+    std::cout << Length;
+    std::cout <<"!\n";
+    std::cout << "The width of the rectangle is "; 
+    std::cout<< Width;
+    std::cout << "!\n";
+    std::cout << "The perimeter of the rectangle is ";
+    std::cout << Perimeter;
+    std::cout << "!\n";
+
+
+
 
 
     //Q2:Strings: Code Word Locater. Store a codeword as a string variable. Create a longer string variable that contains the codeword. Search for the codeword in the string, 
