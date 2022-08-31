@@ -2,21 +2,30 @@
 //
 
 #include <iostream>
+#include<string>
 
 int main()
 {
     int FunnyNumber = 69;
     float FunnyNumberButNot = 6.9f;
     char AlmostAFunnyNumber = 'S';
+    double LargeFunnyNumberButNot = 6.9;
+    unsigned UnsignedFunnyNumber = 69u;
+    bool FunnyNumbertf = true;
+
+    std::string FunnyNumberWord = "Sixty Nine";
 
 
+    //Prints text and variable values to the console
     std::cout << "Roses are red\n"
         << "Violets are blue\n"
         << "Whatever you do,\n"
         << "Don't look behind you\n"
-        << FunnyNumber <<"\n"
-        <<FunnyNumberButNot <<"\n"
-        <<AlmostAFunnyNumber;
+        << FunnyNumber <<"\n" //Integer
+        <<FunnyNumberButNot <<"\n" //Float
+        <<AlmostAFunnyNumber << "\n" // Character
+        <<FunnyNumberWord <<"\n"; //String
+
 
 
 }
