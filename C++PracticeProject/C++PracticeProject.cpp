@@ -6,26 +6,72 @@
 
 int main()
 {
-    int FunnyNumber = 69;
-    float FunnyNumberButNot = 6.9f;
-    char AlmostAFunnyNumber = 'S';
-    double LargeFunnyNumberButNot = 6.9;
-    unsigned UnsignedFunnyNumber = 69u;
-    bool FunnyNumbertf = true;
+    int TestInt = 69;
+    float TestFloat = 6.9f;
+    char TestChar = 'S';
+    double TestDouble = 6.9;
+    unsigned TestUnsigned = 69u;
+    bool TestBool = true;
 
-    std::string FunnyNumberWord = "Sixty Nine";
+    char FirstMethodString[5]; "String";
 
+    std::string WordOne = "Sixty";
+    std::string WordTwo = "Nine";
+    
+    std::string TestString = WordOne + " " + WordTwo;
+
+    char firstLetter = FirstMethodString[0];
+
+    //substr splits the string based n an initial position
+    std::string letters = TestString.substr(0, 1);
+
+    
+    std::size_t spacePos = TestString.find(" ");
+
+    //you can find the position in the string and store it in a variable f type std::size_t similar to int
+    letters += TestString.substr(spacePos + 1, 1);
+
+    //example of output
+    std::cout << letters << std::endl;
+
+    //we can use that position to find the next substring
+    TestString = "Big fucking gun";
 
     //Prints text and variable values to the console
     std::cout << "Roses are red\n"
         << "Violets are blue\n"
         << "Whatever you do,\n"
         << "Don't look behind you\n"
-        << FunnyNumber <<"\n" //Integer
-        <<FunnyNumberButNot <<"\n" //Float
-        <<AlmostAFunnyNumber << "\n" // Character
-        <<FunnyNumberWord <<"\n"; //String
+        <<TestInt <<"\n" //Integer
+        <<TestFloat <<"\n" //Float
+        <<TestChar << "\n" // Character
+        <<TestString <<"\n"; //String
 
+    std::cout << "\n";
+
+    /*Practice problem : Truncate text after 20 characters
+
+    std::string originalLongText = "Did you know, that in terms of pokemon-human breeding, vaporeon is the most-";
+    std::string truncatedText = originalLongText.substr(0, 20);
+
+    std::cout << "Original text = " << originalLongText << std::endl;
+    std::cout << "Truncated text = " << truncatedText << std::endl;
+
+    std::string breakText = truncatedText + "\n";
+    breakText += originalLongText.substr(20, std::string::np); */
+
+
+
+
+
+    //Input
+    std::cout << "Your address is known by the FBI";
+    std::string entryString = "";
+
+    //std::cin >> is used for input
+    //input is stored in the variable to the right of the string
+    std::cin >> entryString;
+    std::cout << "You typed " << entryString << "!\n";
 
 
 }
