@@ -26,11 +26,29 @@ int main()
     std::cout << "!\n";
     std::cout << "The perimeter of the rectangle is ";
     std::cout << Perimeter;
-    std::cout << "!\n";
+    std::cout << "!\n" << "\n";
 
+    
 
     //Q2:Strings: Code Word Locater. Store a codeword as a string variable. Create a longer string variable that contains the codeword. Search for the codeword in the string, 
     //and print out it's position in the string.
+    //Declare and assign variables
+    std::string CodeWord = "poggers";
+    std::string Camouflage = "This meal is super good, I would almost call it poggers if not for the human eyeballs.";
+
+    //Split the string into a substring and find the position of the code
+    //word
+    std::string Letters = Camouflage.substr(0, 1);
+
+    std::size_t spacePos = Camouflage.find(CodeWord);
+    
+    //Output the position
+    Letters += Camouflage.substr(spacePos + 1, 1);
+
+
+    
+    
+
 
 
     //Q3:Input: Date of Birth. Ask the player for their Year, Month, and Day of birth. Store each in an appropriate variable, then print them out together.

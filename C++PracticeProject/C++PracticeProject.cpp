@@ -24,7 +24,7 @@ int main()
 
     char firstLetter = FirstMethodString[0];
 
-    //substr splits the string based n an initial position
+    //substr splits the string based on an initial position
     std::string letters = TestString.substr(0, 1);
 
     
@@ -104,7 +104,7 @@ int main()
 
 
     //Selection
-    bool decision = true
+    bool decision = true;
         if (decision == true)
         {
             std::cout << "decision was true!\n";
