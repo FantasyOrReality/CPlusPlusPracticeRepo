@@ -27,7 +27,6 @@ int main()
     std::cout << "The perimeter of the rectangle is ";
     std::cout << Perimeter;
     std::cout << "!\n" << "\n";
-
     
 
     //Q2:Strings: Code Word Locater. Store a codeword as a string variable. Create a longer string variable that contains the codeword. Search for the codeword in the string, 
@@ -41,17 +40,36 @@ int main()
     std::string Letters = Camouflage.substr(0, 1);
 
     std::size_t spacePos = Camouflage.find(CodeWord);
-    
+
     //Output the position
-    Letters += Camouflage.substr(spacePos + 1, 1);
-
-
-    
-    
-
+    Letters += Camouflage.substr(spacePos + 1);
+    std::cout<<"The position of the codeword in the text is: " << spacePos << "\n";
 
 
     //Q3:Input: Date of Birth. Ask the player for their Year, Month, and Day of birth. Store each in an appropriate variable, then print them out together.
+    //Declare variables
+    int BirthYear;
+    int BirthMonth;
+    int BirthDay;
+
+    
+    //Ask for year of birth
+    std::cout << "Please enter the year you were born as a whole number."<< "\n";
+    std::cin >> BirthYear;
+
+    //Ask for month of birth
+    std::cout << "Please enter the month you were born as a whole number." << "\n";
+    std::cin >> BirthMonth;
+
+
+    //Ask for day of birth
+    std::cout << "Please enter the day you were born as a whole number." << "\n";
+    std::cin >> BirthDay;
+
+    //Print together
+    std::cout << "Your date of birth is: " << BirthDay << "/" << BirthMonth << "/" << BirthYear << std::endl;
+
+
 
 
     //Q4:Selection: Swear Bleeper. Store a "bad" word (it could be anything) in a string variable. Ask the player to enter a single word. Compare if the word they entered is the 
