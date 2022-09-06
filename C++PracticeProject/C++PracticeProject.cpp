@@ -4,9 +4,16 @@
 #include <iostream>
 #include<string>
 
+void BasicFunction()
+{
+    std::cout << "Basic function ran.\n";
+
+}
+
 
 int main()
 {
+    //First set of examples
     /*
     int TestInt = 69;
     float TestFloat = 6.9f;
@@ -60,12 +67,12 @@ int main()
     std::cout << "Truncated text = " << truncatedText << std::endl;
 
     std::string breakText = truncatedText + "\n";
-    breakText += originalLongText.substr(20, std::string::np); */
+    breakText += originalLongText.substr(20, std::string::np); 
 
 
 
 
-  /*
+  
     //Input
     std::cout << "Your address is known by the FBI.\n";
     std::string entryString = "";
@@ -223,7 +230,7 @@ int main()
         whileB = false;
         //At the end, we check the condition, if it is still true, loop again.
     }
-    */
+    
 
     //gooooooogle - 
     //store a variable for the number of pages of search results. 
@@ -249,10 +256,14 @@ int main()
     std::cout << "gle";
 
     //Print the resulting string
+    */ 
+
+    // Function examples
+    BasicFunction();
 
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+
+
 
 
