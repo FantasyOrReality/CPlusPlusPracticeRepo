@@ -100,35 +100,159 @@ int main()
     std::cout << "You are on a watchlist.\n";
     std::getline(std::cin, lineOfText);
     std::cout << "You typed " << lineOfText << "!\n";
-    */
+    
 
 
     //Selection
-    bool decision = true;
-        if (decision == true)
+    int decision = 0;
+        if (decision == 0)
         {
-            std::cout << "decision was true!\n";
+            std::cout << "decision was 0!\n";
+        }
+        else if (decision == 1)
+        {
+            std::cout << "decision was 1!\n";
+
         }
         else
         {
-            std::cout << "decision was false!\n";
+            std::cout << "decision was not 0 or 1!\n";
         }
+
+
+        int errorCode = 2;
+
+        switch (errorCode)
+        {
+        case 0:
+        {
+            std::cout << "error was 0\n";
+            break;
+        }
+
+        case 1 :
+        {
+            std::cout << "error was 1\n";
+
+            break;
+        }
+
+        case 2:
+        {
+            std::cout << "error was 2\n";
+
+            break;
+        }
+        default:
+        {
+            std::cout << "error was unrecognised\n";
+            break;
+        }
+        }
+
 
     //Advanced if statement: Ternary
     //Written in-line with other code, such as an assignment statement.
     //It results in one or two values being based on the condition
 
     int TernResult = (decision ? 1 : 2);
+        
+
+
+
+    std::cout << "You come across a forked path in the middle of your journey, a centre field of lush floral boundaries and regenerative energy spiralling around the new, almost immortal wooden sign." << "\n"<< "\n";
+    std::cout << "(1) To the north resides FrostSpine, a frozen castle towering above the hills of rolling snow." << "\n" << "It looks to be quite far." << "\n" << "\n";
+    std::cout << "(2) To the south shows a wavey, warm mirage similar to that of a bubbled town." << "\n" << "Curiously, you almost see lively streetsand bustling people running in circles behind the field." << "\n" << "\n";
+    std::cout << "(3) To the east is a broken mirror of air, blue light slithering from the gaps and hissing an alluring tune."<< "\n" <<"It almost seems like the work of an interdimensional needle, why not thread it ? " << "\n" << "\n";
+    std::cout << "(4) To the weast is the empty path that you came from, is it really worth going back?" << "\n" << "\n";
+    std::cout << "(Choose a direction by entering the number next to the similar prompt.)" << "\n" << "\n";
+
+
+
+
+
+    int direction = 0;
+
+    std::cin >> direction;
+    std::cout << "\n";
+
+    switch (direction)
+    {
+    case 1:
+    {
+        std::cout << "Trudging through the thick, pale sheet laid infront of you, you begin to get cold, your hair spinning ice scythes over your face and slowing your pace." << "\n" << "After just a few minutes, you topple to the floor. Out. Cold." << "\n";
+
+        break;
+    }
+
+    case 2:
+    {
+        std::cout << "Kicking your way over to the mirage, you are soon enveloped in warmth, a silent glub of entrance presenting you with the hidden town of Illusia!" << "\n" <<"Shall we have a look around? " << "\n";
+
+        break;
+    }
+
+    case 3:
+    {
+        std::cout << "Each step you take is followed by an echo, almost as if you were stepping on the same spot, over and over, infinitely." << "\n" << "You reach your hand closer... closer... Cl - ERROR" << "\n";
+
+        break;
+    }
+
+    case 4:
+    {
+        std::cout << "You turn around, deciding that trekking farther was an empty promsise, are you right?" << "\n" << "Who knows, all that's certain is; You're safe." << "\n";
+
+        break;
+    }
+    default:
+    {
+        std::cout << "To defy the rules set out for you, you sit in place, not moving while surrounded by a spire of spacetime." << "\n" << "Time passes almost like a speed up, your body wearing downand meeting it's end in the dirt below." << "\n" << "You have joined this plate of vegetation and a wonderful tree may grow here." << "\n";
+
+        break;
+    }
+    }
+
+    //While loops are the same in C++ and C#
+    bool whileB = true;
+
+    //To enter this loop, this condition must be true
+    while (whileB == true)
+    {
+        //Do the body of the loop
+        whileB = false;
+        //At the end, we check the condition, if it is still true, loop again.
+    }
+    */
+
+    //gooooooogle - 
+    //store a variable for the number of pages of search results. 
+    
+    int pages = 2;
+    std::cout << "How many pages are there?\n";
+    std::cin >> pages;
+
+    //Create a string of the word "Google", 
+    std::string o = "o";
+
+
+    //but where there are a number of o equal to the number of pages of search results. 
+    std::cout << "G";
+
+    while (pages > 0)
+    {
+        std::cout << o;
+        pages = pages - 1;
+
+    }
+
+    std::cout << "gle";
+
+    //Print the resulting string
 
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+
