@@ -7,7 +7,6 @@
 
 int main()
 {
-
     //Q1: Variables: Rectangle Info.  Find the perimeter and area of a rectangle, given the length and width. Store each value as a variable, and print the results to the console.
     //Variables
     int Length = 2;
@@ -92,7 +91,7 @@ int main()
         std::cout << EnteredWord << "\n";
 
     }
-
+    
 
     //Q5:Iteration: Bottles of Beer on the Wall. Read an input for a number of bottles of beer to have on the wall. Ask the user if they would like to drink a bottle. 
     //If they do, print the corresponding lyrics to “99 bottles of beer on the wall”, but with the input number of beers on the wall, which is then decreased by 1. 
@@ -103,24 +102,27 @@ int main()
 
 
     //Ask the player how many bottles of beer are on the wall
+    std::cout << "How many bottles of beer are there on the wall?"<< "\n";
     std::cin >> BottleNumber;
+    std::cout << BottleNumber << " bottles of beer on the wall, " << BottleNumber << " bottles of beer on the wall." << "\n";
 
     //Start the game
-    std::cout << "Do you want to drink a bottle? (Y/N)" << "\n";
-    std::cin >> DrinkBeer;
+    
     do
     {
-
+        std::cout << "Do you want to drink a bottle? (Y/N)" << "\n";
+        std::cin >> DrinkBeer;
 
 
         if (DrinkBeer == 'Y')
         {
-            std::cout << BottleNumber << " bottles of beer on the wall, " << BottleNumber << " bottles of beer. Take one down and pass it around, " << BottleNumber - 1 << " bottles of beer on the wall." << "\n";
+            std::cout << BottleNumber << " bottles) of beer on the wall, " << BottleNumber << " bottles of beer. Take one down and pass it around, " << BottleNumber - 1 << " bottles of beer on the wall." << "\n";
             BottleNumber = BottleNumber - 1;
 
         }
         else if (DrinkBeer == 'N')
         {
+            std::cout<< "Thanks for playing!";
             BottleNumber = 0;
 
         }
@@ -128,10 +130,10 @@ int main()
 
 
 
-    } while (BottleNumber>0);
-    {
+    } while (BottleNumber!=0);
+    
         
-    }
+    
 
 
 }
