@@ -10,6 +10,21 @@ void BasicFunction()
 
 }
 
+//This EarlyDeclare function exists 
+//This is called a Forward Declaration
+void EarlyDeclare();
+
+void ParameterFunction(int parameterInt)
+{
+    ++parameterInt;
+    std::cout << "ParameterFunction ran - parameterInt = " << parameterInt << ".\n";
+
+}
+
+int ReturnFunction()
+{
+    return 42;
+}
 
 int main()
 {
@@ -257,12 +272,38 @@ int main()
 
     //Print the resulting string
     */ 
-
+//Second set of examples
+/*
     // Function examples
     BasicFunction();
 
+    EarlyDeclare();
+
+    int TestInt = 4;
+    //Like saying parameterInt = TestInt
+    ParameterFunction(TestInt);
+    std::cout << "Testint = " << TestInt << ".\n";
+
+    //Catch the value
+    int ReturnValue = ReturnFunction();
+    std::cout << "ReturnValue = " << ReturnValue << ".\n";
+    */
+
+    //Arrays
+    //Static arrays
+    int intArray[] = { 0, 1, 2 };
+    const /*constant*/ int ArraySize = 3;
+    int intArray2[ArraySize];
+
 }
 
+//Implementation for EarlyDeclare that was declared at the top
+//Name must match exactly
+void EarlyDeclare()
+{
+    std::cout << "Early Declare function run!\n";
+
+}
 
 
 
