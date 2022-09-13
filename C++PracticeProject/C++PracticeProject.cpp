@@ -364,6 +364,7 @@ int main()
     int LowerNumber = 50;
     int HigherNumber = 150;
     int range = HigherNumber - LowerNumber;
+
     /*
     int modRandom = std::rand() % range+LowerNumber;
     std::cout << "Mod random number is: " << modRandom << "\n";
