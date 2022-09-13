@@ -355,15 +355,16 @@ int main()
     std::srand(seed);
     int seededRandom = std::rand();
     std::cout << "Seeded random number is: " << seededRandom << "\n";
-
+    
     std::srand(time(NULL));
     int timeSeededRandom = std::rand();
     std::cout << "Seeded random number using time is: " << timeSeededRandom << "\n";
-    
+    */
     std::srand(time(NULL));
     int LowerNumber = 50;
     int HigherNumber = 150;
     int range = HigherNumber - LowerNumber;
+    /*
     int modRandom = std::rand() % range+LowerNumber;
     std::cout << "Mod random number is: " << modRandom << "\n";
     */

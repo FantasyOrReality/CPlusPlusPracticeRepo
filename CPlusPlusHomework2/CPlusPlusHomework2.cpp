@@ -2,6 +2,9 @@
 //
 
 #include <iostream>
+#include <stdlib.h> //to use rand()
+#include <time.h> //used for time
+#include <vector> 
 
 int RectangleAreaFunction(int RectangleHeight, int RectangleWidth)
 {
@@ -10,11 +13,12 @@ int RectangleAreaFunction(int RectangleHeight, int RectangleWidth)
 	return RectangleArea;
 }
 
-int RandomNumberFunction()
+int RandomNumberFunction(int fakePlayerScore, int MinScore, int MaxScore, int range)
 {
 	//Generate random number
-	std::srand(time(NULL));
-
+	fakePlayerScore = std::rand() % range+MinScore;
+	std::cout << "The player's score is: " << fakePlayerScore << "\n";
+	return 0;
 }
 
 int main()
@@ -37,17 +41,52 @@ int main()
 
 //Declare and assign variables
 	int fakePlayerScore = 0; 
-	int MinScore = 0;
-	int MaxScore = 0;
+	int MinScore = 10;
+	int MaxScore = 100;
+	int range = MaxScore - MinScore;
+	std::srand(time(NULL));
 
-//Call function
+
+//Call function five times
+	RandomNumberFunction(fakePlayerScore, MinScore, MaxScore, range);
+	RandomNumberFunction(fakePlayerScore, MinScore, MaxScore, range);
+	RandomNumberFunction(fakePlayerScore, MinScore, MaxScore, range);
+	RandomNumberFunction(fakePlayerScore, MinScore, MaxScore, range);
+	RandomNumberFunction(fakePlayerScore, MinScore, MaxScore, range);
 
 
-
-//3 - Vectors : Who’s In Your Party. Write a program to read in the names for a player’s adventuring party, which can have any number of party members.Each party member’s name should be stored separately in an array or vector.
+//3 - Vectors : Who’s In Your Party. Write a program to read in the names for a player’s adventuring party, which can have any number of party members. Each party member’s name should be stored separately in an array or vector.
 //Print them out when the player is done entering the names.
+	//Declare vector
+
+	//Declare and assign variables
+	int PartySize = 0;
+	std::string PartyMemberName = "";
+
+	//Get party size
+	std::cout << "How many members are there in your party?" << std::endl;
+	std::cin >> PartySize;
+
+	std::vector <std::string> PartyMembers;
+
+	//Get each member
+	for (int i = 0; i < PartySize; ++i)
+	{
+		std::cout << "Who is party member number " << i + 1 << "?" << std::endl;
+		std::cin >> PartyMemberName;
+		PartyMembers.push_back(PartyMemberName);
+		//PartyMembers[i] = PartyMemberName;
+		PartyMemberName = "";
+	}
+
+	for (int j = 0; j < PartyMembers.size(); ++j)
+	{
+		std::string MemberName = PartyMembers[j];
+		std::cout << "Party member number " << j + 1 << " is " << PartyMembers[j] << std::endl;
 
 
+
+	}
 
 }
 
