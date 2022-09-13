@@ -136,69 +136,127 @@ int CharacterCreate()
 int GameIntro()
 {
 	//variables
-	std::string SkipButton = "";
-	bool Continue= true;
-	//Introduce the world
-	do
-	{
-		std::cout << "Welcome to the world of Fantasy Reality, a name given to us by our god.\nIt is a world cast over by a crimson hue of sky laying over our red medows and rumbled dwelling.\nThe glorific blood rain pours from the ascended smoke clouds and infects the world with an intoxicating iron stench.\nThe empty stretches of land is void of the melting demon population, as if they have returned to the nightmares of our beloved deity so the fleshy crimson stone can continue to sit in defening silence.\n"; //First text chunk
-		std::cout << "\n";
-		std::cout << "If you want to move on, type and enter 'y'"; //press a button to continue text
-		std::cout << "\n";
-		std::cin >> SkipButton;
-
-		if (SkipButton == "y")
-		{
-			Continue = true;
-			system("Cls");
-
-
-		}
-		else
-		{
-			Continue = false;
-		}
-
-	} while (Continue == false);
+		std::string SkipButton = "";
+		bool Continue = true;
 	
-	//Reset the skip button
-	SkipButton = "";
-	Continue = false;
 
-	//Second text chunk
-	do
-	{
-	std::cout << "Now, who is our god? "; 
-	std::cout << "\n";
-	std::cout << "If you want to move on, type and enter 'y'"; //press a button to continue text
-	std::cout << "\n";
-	std::cin >> SkipButton;
+	//Introduce the world
+		
+		do
+		{
+			std::cout << "Welcome to the world of Fantasy Reality, a name given to us by our god.\nIt is a world cast over by a crimson hue of sky laying over our red medows and rumbled dwelling.\nThe glorific blood rain pours from the ascended smoke clouds and infects the world with an intoxicating iron stench.\nThe empty stretches of land is void of the melting demon population, as if they have returned to the nightmares of our beloved deity so the fleshy crimson stone can continue to sit in defening silence.\n"; //First text chunk
+			std::cout << "\n";
+			std::cout << "If you want to move on, type and enter 'y'"; //press a button to continue text
+			std::cout << "\n";
+			std::cin >> SkipButton;
 
-	if (SkipButton == "y")
-	{
-		Continue = true;
-	}
-	else
-	{
+			if (SkipButton == "y")
+			{
+				Continue = true;
+				system("Cls");
+			}
+			else
+			{
+				Continue = false;
+				system("Cls");
+			}
+
+		} while (Continue == false);
+
+		//Reset the skip button
+		SkipButton = "";
 		Continue = false;
-	}
-	} while (Continue == false);
 
-	//Reset the skip button
-	SkipButton = "";
-	Continue = false;
+		//Second text chunk
+		do
+		{
+			std::cout << "Now, who is our god? ";
+			std::cout << "\n";
+			std::cout << "If you want to move on, type and enter 'y'"; //press a button to continue text
+			std::cout << "\n";
+			std::cin >> SkipButton;
 
+			if (SkipButton == "y")
+			{
+				Continue = true;
+				system("Cls");
+			}
+			else
+			{
+				Continue = false;
+				system("Cls");
+			}
+		} while (Continue == false);
+
+		//Reset the skip button
+		SkipButton = "";
+		Continue = false;
+
+
+	
 	//Introduce the character background
+		do
+		{
+			std::cout << "Introducing the character"; //First text chunk
+			std::cout << "\n";
+			std::cout << "If you want to move on, type and enter 'y'"; //press a button to continue text
+			std::cout << "\n";
+			std::cin >> SkipButton;
+
+			if (SkipButton == "y")
+			{
+				Continue = true;
+				system("Cls");
+			}
+			else
+			{
+				Continue = false;
+				system("Cls");
+			}
+
+		} while (Continue == false);
+
+		//Reset the skip button
+		SkipButton = "";
+		Continue = false;
 
 	//Introduce the current situation
+		
+		do
+		{
+			std::cout << "Introducing the current situation"; //First text chunk
+			std::cout << "\n";
+			std::cout << "If you want to move on, type and enter 'y'"; //press a button to continue text
+			std::cout << "\n";
+			std::cin >> SkipButton;
+
+			if (SkipButton == "y")
+			{
+				Continue = true;
+				system("Cls");
+			}
+			else
+			{
+				Continue = false;
+				system("Cls");
+			}
+
+		} while (Continue == false);
+
+		//Reset the skip button
+		SkipButton = "";
+		Continue = false;
 
 	//return value
-	return 0;
+		return 0;
 }
 
 int main()
 {
+	//Introduce the world, character and situation
 	GameIntro();
+
+	//Make your character
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
