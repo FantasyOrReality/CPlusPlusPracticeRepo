@@ -3,6 +3,10 @@
 
 #include <iostream>
 #include<string>
+#include <vector>
+#include <stdlib.h> //to use rand()
+#include <time.h> //used for time
+
 
 void BasicFunction()
 {
@@ -272,8 +276,8 @@ int main()
 
     //Print the resulting string
     */ 
-//Second set of examples
-/*
+    //Second set of examples
+    /*
     // Function examples
     BasicFunction();
 
@@ -290,10 +294,79 @@ int main()
     */
 
     //Arrays
-    //Static arrays
+    /*Static arrays
     int intArray[] = { 0, 1, 2 };
-    const /*constant*/ int ArraySize = 3;
+    const int ArraySize = 3;
     int intArray2[ArraySize];
+    */
+
+    //Vectors
+    /*
+    std::vector<int> intVector;
+
+    //Add items to the vector using a function called 
+    //push_back() and it adds to the back
+    //(end) of the vector
+    intVector.push_back(1); //Vector = {1}
+    intVector.push_back(2); //Vector = {1, 2}
+    intVector.push_back(36); //Vector = {1, 2, 36}
+    intVector.push_back(69); //Vector = {1, 2, 36, 69}
+    intVector.push_back(420); //Vector = {1, 2, 36, 69, 420}
+
+
+    //check size with VectorName.size()
+    std::cout << "Vector is " << intVector.size() <<"\n";
+
+    //You can access items in a vector just like an array
+    std::cout << "Vector index 1 is " << intVector[1] << "\n";
+
+    //Change the value of an item
+    intVector[1] = 5;
+    std::cout << "Vector index 1 is " << intVector[1] << "\n";
+
+    //Items can be removed using the erase() function
+    //Erase uses iterators
+    //An iterator is like a marker for a point in the vector
+    //Let's erase the first two elements
+    //parameter 1 - starting point
+    //parameter 2 - end BEFORE this point
+    //Vector = {1, 2, 36, 69, 420}
+    intVector.erase(intVector.begin(), intVector.begin()+2);
+    std::cout << "Vector is " << intVector.size() << "\n";
+    std::cout << "Vector index 0 is " << intVector[0] << "\n";
+
+    //For loop goes through the vector and prints them back out
+    for (size_t i = 0; i < intVector.size(); ++i)
+    {
+        std::cout << "Vector index " << i << " = " << intVector[i] << "\n";
+        
+    }
+    */
+    
+    //Random
+    /*
+    //generate a random number
+    //anywhere from 0 to RAND_MAX (Beeg)
+    int totallyRandom = std::rand();
+    std::cout << "Random number is: " << totallyRandom << "\n";
+
+    //a seed is a starting point for random calculation
+    int seed = 100;
+    std::srand(seed);
+    int seededRandom = std::rand();
+    std::cout << "Seeded random number is: " << seededRandom << "\n";
+
+    std::srand(time(NULL));
+    int timeSeededRandom = std::rand();
+    std::cout << "Seeded random number using time is: " << timeSeededRandom << "\n";
+    
+    std::srand(time(NULL));
+    int LowerNumber = 50;
+    int HigherNumber = 150;
+    int range = HigherNumber - LowerNumber;
+    int modRandom = std::rand() % range+LowerNumber;
+    std::cout << "Mod random number is: " << modRandom << "\n";
+    */
 
 }
 
