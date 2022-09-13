@@ -6,6 +6,8 @@
 #include <windows.h>
 #include <stdlib.h>
 #include <string.h>
+#include <conio.h>
+#include <dos.h>
 using namespace std;
 
 
@@ -139,7 +141,7 @@ int GameIntro()
 	//Introduce the world
 	do
 	{
-		std::cout << "This is the first text chunk"; //First text chunk
+		std::cout << "Welcome to the world of Fantasy Reality, a name given to us by our god.\nIt is a world cast over by a crimson hue of sky laying over our red medows and rumbled dwelling.\nThe glorific blood rain pours from the ascended smoke clouds and infects the world with an intoxicating iron stench.\nThe empty stretches of land is void of the melting demon population, as if they have returned to the nightmares of our beloved deity so the fleshy crimson stone can continue to sit in defening silence.\n"; //First text chunk
 		std::cout << "\n";
 		std::cout << "If you want to move on, type and enter 'y'"; //press a button to continue text
 		std::cout << "\n";
@@ -148,6 +150,9 @@ int GameIntro()
 		if (SkipButton == "y")
 		{
 			Continue = true;
+			system("Cls");
+
+
 		}
 		else
 		{
@@ -163,7 +168,7 @@ int GameIntro()
 	//Second text chunk
 	do
 	{
-	std::cout << "This is the second text chunk"; 
+	std::cout << "Now, who is our god? "; 
 	std::cout << "\n";
 	std::cout << "If you want to move on, type and enter 'y'"; //press a button to continue text
 	std::cout << "\n";
