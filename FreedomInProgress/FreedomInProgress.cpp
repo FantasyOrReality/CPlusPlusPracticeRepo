@@ -8,6 +8,13 @@
 #include <string.h>
 #include <conio.h>
 #include <dos.h>
+
+#include "Player.h"
+#include "Area.h"
+#include "Weapon.h"
+#include "Armour.h"
+#include "Feature.h"
+
 using namespace std;
 
 
@@ -254,7 +261,48 @@ int GameIntro()
 int main()
 {
 	//Introduce the world, character and situation
-	GameIntro();
+	//GameIntro();
+
+	//Example instances
+	Player examplePlayer1;
+	Player examplePlayer2;
+	Player examplePlayer3;
+
+	Area exampleArea1;
+	Area exampleArea2;
+	Area exampleArea3;
+
+	Weapon exampleWeapon1;
+	Weapon exampleWeapon2;
+	Weapon exampleWeapon3;
+
+	Armour exampleArmour1;
+	Armour exampleArmour2;
+	Armour exampleArmour3;
+
+	Feature exampleFeature1;
+	Feature exampleFeature2;
+	Feature exampleFeature3;
+
+
+	//Example assignment
+	examplePlayer1.name = "TestSubjectA";
+	examplePlayer1.description = "The first subject tested to show the capabilities of this world.";
+	examplePlayer1.maxHealth = 100;
+	examplePlayer1.baseAttack = 1;
+	examplePlayer1.baseDefense = 1;
+	examplePlayer1.baseSpeed = 1;
+	examplePlayer1.currentWeapon = "stick";
+	examplePlayer1.currentHelmet = "hat";
+	examplePlayer1.currentBodyPiece = "cloth";
+	examplePlayer1.inventory.push_back("stick");
+	examplePlayer1.inventory.push_back("hat");
+	examplePlayer1.inventory.push_back("cloth");
+	examplePlayer1.currentHealth = 100;
+
+
+
+
 
 	//Make your character
 }
