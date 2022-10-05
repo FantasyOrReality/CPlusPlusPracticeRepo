@@ -354,16 +354,88 @@ int main()
 	exampleArea3.currentContents.push_back("lamp");
 
 	//Monster
+	exampleMonster1.name = "Howard";
+	exampleMonster1.type = "Light Demon";
+	exampleMonster1.description = "Your first regular fight, he's quite calm about the situation";
+	exampleMonster1.attack = 10;
+	exampleMonster1.defense = 10;
+	exampleMonster1.speed = 10;
+	exampleMonster1.maxHealth = 1000;
+	exampleMonster1.currentHealth = 1000;
 
+	exampleMonster2.name = "Jennifer";
+	exampleMonster2.type = "Heavy Demon";
+	exampleMonster2.description = "Your second regular fight, she's quite anxious about the situation";
+	exampleMonster2.attack = 20;
+	exampleMonster2.defense = 20;
+	exampleMonster2.speed = 20;
+	exampleMonster2.maxHealth = 2000;
+	exampleMonster2.currentHealth = 2000;
+
+	exampleMonster3.name = "Cyneck";
+	exampleMonster3.type = "Boss Demon";
+	exampleMonster3.description = "Your first Boss fight, they're very excited about the situation";
+	exampleMonster3.attack = 100;
+	exampleMonster3.defense = 100;
+	exampleMonster3.speed = 30;
+	exampleMonster3.maxHealth = 30000;
+	exampleMonster3.currentHealth = 30000;
 
 	//Weapon
+	exampleWeapon1.name = "stick";
+	exampleWeapon1.type = "base melee";
+	exampleWeapon1.description = "Just a regular stick, made of hard wood.";
+	exampleWeapon1.attackBonus = 0.01f;
+	exampleWeapon1.defenseBonus = 0.00f;
+	exampleWeapon1.speedBonus = 0.00f;
 
+	exampleWeapon2.name = "rod";
+	exampleWeapon2.type = "base melee";
+	exampleWeapon2.description = "An old metal rod, scratches and burns cover it.";
+	exampleWeapon2.attackBonus = 0.02f;
+	exampleWeapon2.defenseBonus = 0.01f;
+	exampleWeapon2.speedBonus = -0.01f;
+
+	exampleWeapon3.name = "sword";
+	exampleWeapon3.type = "special melee";
+	exampleWeapon3.description = "the classic rapier, given to you by your guide.";
+	exampleWeapon3.attackBonus = 0.05f;
+	exampleWeapon3.defenseBonus = 0.05f;
+	exampleWeapon3.speedBonus = -0.05f;
 
 	//Armour
+	exampleArmour1.name = "hat";
+	exampleArmour1.type = "helmet";
+	exampleArmour1.description = "An old, ragged hat. It smells kind bad...";
+	exampleArmour1.attackBonus = 0.00f;
+	exampleArmour1.defenseBonus = 0.00f;
+	exampleArmour1.speedBonus = 0.00f;
+
+	exampleArmour2.name = "cloth";
+	exampleArmour2.type = "bodypiece";
+	exampleArmour2.description = "An old, ragged cloth. It smells weird...";
+	exampleArmour2.attackBonus = 0.00f;
+	exampleArmour2.defenseBonus = 0.00f;
+	exampleArmour2.speedBonus = 0.00f;
+
+	exampleArmour3.name = "cap";
+	exampleArmour3.type = "helmet";
+	exampleArmour3.description = "An old, ragged cap. It reminds you of your childhood.";
+	exampleArmour3.attackBonus = 0.01f;
+	exampleArmour3.defenseBonus = 0.00f;
+	exampleArmour3.speedBonus = 0.01f;
+
 
 
 	//Feature
+	exampleFeature1.name = "Combat";
+	exampleFeature1.description = "Combat is the basic fighting mode, it is done to clear areas of monsters.";
 
+	exampleFeature2.name = "Lock opening";
+	exampleFeature2.description = "Lock opening is a feature used to pass locked doors.";
+
+	exampleFeature3.name = "Item grabbing";
+	exampleFeature3.description = "Item grabbing is a feature used when moving physical objects from the world into the inventory as an item.";
 
 	//Make your character
 }
