@@ -11,6 +11,7 @@
 
 #include "Player.h"
 #include "Area.h"
+#include "Monster.h"
 #include "Weapon.h"
 #include "Armour.h"
 #include "Feature.h"
@@ -272,6 +273,10 @@ int main()
 	Area exampleArea2;
 	Area exampleArea3;
 
+	Monster exampleMonster1;
+	Monster exampleMonster2;
+	Monster exampleMonster3;
+
 	Weapon exampleWeapon1;
 	Weapon exampleWeapon2;
 	Weapon exampleWeapon3;
@@ -285,7 +290,8 @@ int main()
 	Feature exampleFeature3;
 
 
-	//Example assignment
+	//Example assignments
+	//Player
 	examplePlayer1.name = "TestSubjectA";
 	examplePlayer1.description = "The first subject tested to show the capabilities of this world.";
 	examplePlayer1.maxHealth = 100;
@@ -300,8 +306,63 @@ int main()
 	examplePlayer1.inventory.push_back("cloth");
 	examplePlayer1.currentHealth = 100;
 
+	examplePlayer2.name = "TestSubjectB";
+	examplePlayer2.description = "The second subject tested to show the capabilities of this world.";
+	examplePlayer2.maxHealth = 200;
+	examplePlayer2.baseAttack = 2;
+	examplePlayer2.baseDefense = 2;
+	examplePlayer2.baseSpeed = 2;
+	examplePlayer2.currentWeapon = "rod";
+	examplePlayer2.currentHelmet = "cap";
+	examplePlayer2.currentBodyPiece = "scarf";
+	examplePlayer2.inventory.push_back("rod");
+	examplePlayer2.inventory.push_back("cap");
+	examplePlayer2.inventory.push_back("scarf");
+	examplePlayer2.currentHealth = 200;
+
+	examplePlayer3.name = "TestSubjectC";
+	examplePlayer3.description = "The third subject tested to show the capabilities of this world.";
+	examplePlayer3.maxHealth = 300;
+	examplePlayer3.baseAttack = 3;
+	examplePlayer3.baseDefense = 3;
+	examplePlayer3.baseSpeed = 3;
+	examplePlayer3.currentWeapon = "sword";
+	examplePlayer3.currentHelmet = "bucket";
+	examplePlayer3.currentBodyPiece = "bodysuit";
+	examplePlayer3.inventory.push_back("sword");
+	examplePlayer3.inventory.push_back("bucket");
+	examplePlayer3.inventory.push_back("bodysuit");
+	examplePlayer3.currentHealth = 300;
+
+	//Area
+	exampleArea1.name = "Tutorial1";
+	exampleArea1.description = "The first tutorial area";
+	exampleArea1.startingContents.push_back("table");
+	exampleArea1.exits.push_back("north exit");
+	exampleArea1.currentContents.push_back("table");
+
+	exampleArea2.name = "Tutorial2";
+	exampleArea2.description = "The second tutorial area";
+	exampleArea2.startingContents.push_back("chair");
+	exampleArea2.exits.push_back("south exit");
+	exampleArea2.currentContents.push_back("chair");
+
+	exampleArea3.name = "Tutorial3";
+	exampleArea3.description = "The third tutorial area";
+	exampleArea3.startingContents.push_back("lamp");
+	exampleArea3.exits.push_back("east exit");
+	exampleArea3.currentContents.push_back("lamp");
+
+	//Monster
 
 
+	//Weapon
+
+
+	//Armour
+
+
+	//Feature
 
 
 	//Make your character
