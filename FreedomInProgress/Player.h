@@ -6,6 +6,14 @@
 class Player
 {
 public:
+
+	//Constructor
+	Player();
+
+	//Fuctions
+	void Go();
+
+	//Data
 	//Basic info
 	std::string name;
 	std::string description;
@@ -22,6 +30,7 @@ public:
 	std::string currentBodyPiece;
 	std::vector<std::string> inventory;
 	int currentHealth;
+	std::string currentArea;
 
 };
 

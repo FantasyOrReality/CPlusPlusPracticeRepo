@@ -7,9 +7,18 @@ class Area
 {
 public:
 
+	//Constructor
+	Area();
+
+	//Functions
+	void Look();
+
+
 	//Basic info
 	std::string name;
 	std::string description;
+	std::vector<std::string> connectedAreas;
+
 
 	//Advanced info
 	std::vector<std::string> startingContents;
@@ -17,6 +26,7 @@ public:
 
 	//Current info
 	std::vector<std::string> currentContents;
+
 
 };
 
