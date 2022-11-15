@@ -6,23 +6,25 @@
 class Area
 {
 public:
+	//Classes
+	class Player;
 
 	//Constructor
 	Area();
 
 	//Functions
-	void Look();
-
+	void Look(std::string name, std::string description, std::vector<Area*> connectedAreas);
+	void Go(std::string name, Player& ToGo); //Change the current area
 
 	//Basic info
 	std::string name;
 	std::string description;
-	std::vector<std::string> connectedAreas;
+	std::vector<Area*> connectedAreas;
+	Player* currentPlayer;
 
 
 	//Advanced info
 	std::vector<std::string> startingContents;
-	std::vector<std::string> exits;
 
 	//Current info
 	std::vector<std::string> currentContents;

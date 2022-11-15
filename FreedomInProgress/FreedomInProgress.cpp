@@ -1,13 +1,9 @@
 // FreedomInProgress.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+//Include default 
 #include <iostream>
 #include <string>
-#include <windows.h>
-#include <stdlib.h>
-#include <string.h>
-#include <conio.h>
-#include <dos.h>
 
 #include "Player.h"
 #include "Area.h"
@@ -338,19 +334,16 @@ int main()
 	exampleArea1.name = "Tutorial1";
 	exampleArea1.description = "The first tutorial area";
 	exampleArea1.startingContents.push_back("table");
-	exampleArea1.exits.push_back("north exit");
 	exampleArea1.currentContents.push_back("table");
 
 	exampleArea2.name = "Tutorial2";
 	exampleArea2.description = "The second tutorial area";
 	exampleArea2.startingContents.push_back("chair");
-	exampleArea2.exits.push_back("south exit");
 	exampleArea2.currentContents.push_back("chair");
 
 	exampleArea3.name = "Tutorial3";
 	exampleArea3.description = "The third tutorial area";
 	exampleArea3.startingContents.push_back("lamp");
-	exampleArea3.exits.push_back("east exit");
 	exampleArea3.currentContents.push_back("lamp");
 
 	//Monster
@@ -437,7 +430,24 @@ int main()
 	exampleFeature3.name = "Item grabbing";
 	exampleFeature3.description = "Item grabbing is a feature used when moving physical objects from the world into the inventory as an item.";
 
+	//Connect all areas
+	//Area 1
+	exampleArea1.connectedAreas.push_back(&exampleArea2);
+	exampleArea1.connectedAreas.push_back(&exampleArea3);
+
+	//Area 2
+	exampleArea2.connectedAreas.push_back(&exampleArea1);
+
+	//Area 3
+	exampleArea3.connectedAreas.push_back(&exampleArea1);
+
+
 	//Make your character
+
+	//Move to an area
+	examplePlayer1.Look();
+
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

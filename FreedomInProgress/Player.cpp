@@ -12,12 +12,9 @@ Player::Player()
 	currentHelmet(""),
 	currentBodyPiece(""),
 	currentHealth(0),
-	currentArea("")
+	currentArea()
 
 {
 }
 
-void Player::Go()
-{
 
-}

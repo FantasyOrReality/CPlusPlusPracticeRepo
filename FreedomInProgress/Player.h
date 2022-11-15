@@ -6,12 +6,13 @@
 class Player
 {
 public:
+	//Classes for pointers
+	class Area;
 
 	//Constructor
 	Player();
 
 	//Fuctions
-	void Go();
 
 	//Data
 	//Basic info
@@ -30,7 +31,7 @@ public:
 	std::string currentBodyPiece;
 	std::vector<std::string> inventory;
 	int currentHealth;
-	std::string currentArea;
+	Area* currentArea;
 
 };
 
