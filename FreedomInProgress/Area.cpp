@@ -11,9 +11,16 @@ description()
 {
 }
 
-void Area::Look(std::string name, std::string description, std::vector<Area*> connectedAreas)
+void Area::Look()
 {
 	std::cout << "The current area is named " + name << std::endl;
+	std::cout << " " + description << std::endl;
+
+	//Loop things
+	for (int i = 0; i < connectedAreas.size(); ++i)
+	{
+		std::cout << connectedAreas[i]->name<< std::endl;
+	}
 
 }
 

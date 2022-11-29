@@ -3,11 +3,12 @@
 #include <string>
 #include <vector>
 
+class Area;
+
 class Player
 {
 public:
 	//Classes for pointers
-	class Area;
 
 	//Constructor
 	Player();

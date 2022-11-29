@@ -13,7 +13,7 @@ public:
 	Area();
 
 	//Functions
-	void Look(std::string name, std::string description, std::vector<Area*> connectedAreas);
+	void Look();
 	void Go(std::string name, Player& ToGo); //Change the current area
 
 	//Basic info

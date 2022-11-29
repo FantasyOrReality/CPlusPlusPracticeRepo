@@ -12,8 +12,6 @@
 #include "Armour.h"
 #include "Feature.h"
 
-using namespace std;
-
 
 //Mechanics functions
 //Colour list
@@ -445,7 +443,8 @@ int main()
 	//Make your character
 
 	//Move to an area
-	examplePlayer1.Look();
+	examplePlayer1.currentArea = &exampleArea1;
+	examplePlayer1.currentArea->Look();
 
 
 }
