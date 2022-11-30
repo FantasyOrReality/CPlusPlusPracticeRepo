@@ -3,22 +3,25 @@
 #include <string>
 #include <vector>
 
-class Area
+#include "Thing.h"
+
+class Area : public Thing
 {
 public:
 	//Classes
 	class Player;
 
-	//Constructor
+	//Default Constructor
 	Area();
+
+	//Parameter Constructor
+	Area(std::string newName, std::string newDescription, std::vector<Area*> newConnectedAreas, Player* newCurrentPlayer, std::vector<std::string> newStartingContents, std::vector<std::string> newCurrentContents);
 
 	//Functions
 	void Look();
 	void Go(std::string name, Player& ToGo); //Change the current area
 
 	//Basic info
-	std::string name;
-	std::string description;
 	std::vector<Area*> connectedAreas;
 	Player* currentPlayer;
 

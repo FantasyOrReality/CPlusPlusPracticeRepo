@@ -2,19 +2,24 @@
 
 #include <string>
 
-class Armour
+#include "Item.h"
+
+class Armour : public Item
 {
 public:
+	//Default Constructor
+	Armour();
 
-	//Basic info
-	std::string name;
-	std::string type;
-	std::string description;
+	//Parameter Constructor
+	Armour(std::string newName, std::string newType, std::string newDescription, float newAttackBonus, float newDefenseBonus, float newSpeedBonus);
 
-	//Advanced info
-	float attackBonus;
-	float defenseBonus;
-	float speedBonus;
+
+	//Destructor
+	~Armour();
+
+private:
+	
+	
 
 };
 

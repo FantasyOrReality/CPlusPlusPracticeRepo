@@ -4,10 +4,13 @@
 //Include default 
 #include <iostream>
 #include <string>
+#include<vector>
 
+#include "Thing.h"
 #include "Player.h"
 #include "Area.h"
 #include "Monster.h"
+#include "Item.h"
 #include "Weapon.h"
 #include "Armour.h"
 #include "Feature.h"
@@ -259,25 +262,26 @@ int main()
 	//GameIntro();
 
 	//Example instances
-	Player examplePlayer1;
+	Player examplePlayer1; 
 	Player examplePlayer2;
 	Player examplePlayer3;
 
-	Area exampleArea1;
-	Area exampleArea2;
-	Area exampleArea3;
+
+	Area exampleArea1; //define values
+	Area exampleArea2; //define values
+	Area exampleArea3;//define values
 
 	Monster exampleMonster1;
 	Monster exampleMonster2;
 	Monster exampleMonster3;
 
-	Weapon exampleWeapon1;
-	Weapon exampleWeapon2;
-	Weapon exampleWeapon3;
+	Weapon exampleWeapon1("stick", "base melee", "Just a regular stick, made of hard wood", 0.01f, 0.00f, 0.00f);
+	Weapon exampleWeapon2("rod", "base melee", "An old metal rod, scratches and burns cover it.", 0.02f, 0.01f, -0.01f);
+	Weapon exampleWeapon3("sword","special melee","the classic rapier, given to you by your guide.", 0.05f, 0.05f, -0.05f);
 
-	Armour exampleArmour1;
-	Armour exampleArmour2;
-	Armour exampleArmour3;
+	Armour exampleArmour1("hat", "helmet", "An old, ragged hat. It smells kind bad...", 0.0f, 0.0f, 0.0f);
+	Armour exampleArmour2("cloth", "bodypiece", "An old, ragged cloth. It smells weird...", 0.0f, 0.0f, 0.0f);
+	Armour exampleArmour3("cap", "helmet", "An old, ragged cap. It reminds you of your childhood.", 0.01f, 0.0f, 0.01f);
 
 	Feature exampleFeature1;
 	Feature exampleFeature2;
@@ -329,7 +333,7 @@ int main()
 	examplePlayer3.currentHealth = 300;
 
 	//Area
-	exampleArea1.name = "Tutorial1";
+	/*exampleArea1.name = "Tutorial1";
 	exampleArea1.description = "The first tutorial area";
 	exampleArea1.startingContents.push_back("table");
 	exampleArea1.currentContents.push_back("table");
@@ -343,6 +347,7 @@ int main()
 	exampleArea3.description = "The third tutorial area";
 	exampleArea3.startingContents.push_back("lamp");
 	exampleArea3.currentContents.push_back("lamp");
+	*/
 
 	//Monster
 	exampleMonster1.name = "Howard";
@@ -372,52 +377,7 @@ int main()
 	exampleMonster3.maxHealth = 30000;
 	exampleMonster3.currentHealth = 30000;
 
-	//Weapon
-	exampleWeapon1.name = "stick";
-	exampleWeapon1.type = "base melee";
-	exampleWeapon1.description = "Just a regular stick, made of hard wood.";
-	exampleWeapon1.attackBonus = 0.01f;
-	exampleWeapon1.defenseBonus = 0.00f;
-	exampleWeapon1.speedBonus = 0.00f;
-
-	exampleWeapon2.name = "rod";
-	exampleWeapon2.type = "base melee";
-	exampleWeapon2.description = "An old metal rod, scratches and burns cover it.";
-	exampleWeapon2.attackBonus = 0.02f;
-	exampleWeapon2.defenseBonus = 0.01f;
-	exampleWeapon2.speedBonus = -0.01f;
-
-	exampleWeapon3.name = "sword";
-	exampleWeapon3.type = "special melee";
-	exampleWeapon3.description = "the classic rapier, given to you by your guide.";
-	exampleWeapon3.attackBonus = 0.05f;
-	exampleWeapon3.defenseBonus = 0.05f;
-	exampleWeapon3.speedBonus = -0.05f;
-
-	//Armour
-	exampleArmour1.name = "hat";
-	exampleArmour1.type = "helmet";
-	exampleArmour1.description = "An old, ragged hat. It smells kind bad...";
-	exampleArmour1.attackBonus = 0.00f;
-	exampleArmour1.defenseBonus = 0.00f;
-	exampleArmour1.speedBonus = 0.00f;
-
-	exampleArmour2.name = "cloth";
-	exampleArmour2.type = "bodypiece";
-	exampleArmour2.description = "An old, ragged cloth. It smells weird...";
-	exampleArmour2.attackBonus = 0.00f;
-	exampleArmour2.defenseBonus = 0.00f;
-	exampleArmour2.speedBonus = 0.00f;
-
-	exampleArmour3.name = "cap";
-	exampleArmour3.type = "helmet";
-	exampleArmour3.description = "An old, ragged cap. It reminds you of your childhood.";
-	exampleArmour3.attackBonus = 0.01f;
-	exampleArmour3.defenseBonus = 0.00f;
-	exampleArmour3.speedBonus = 0.01f;
-
-
-
+	
 	//Feature
 	exampleFeature1.name = "Combat";
 	exampleFeature1.description = "Combat is the basic fighting mode, it is done to clear areas of monsters.";

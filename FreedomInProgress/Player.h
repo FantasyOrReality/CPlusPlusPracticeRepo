@@ -3,9 +3,11 @@
 #include <string>
 #include <vector>
 
+#include "Creature.h"
+
 class Area;
 
-class Player
+class Player : public Creature
 {
 public:
 	//Classes for pointers

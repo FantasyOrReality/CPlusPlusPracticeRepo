@@ -2,19 +2,26 @@
 
 #include <string>
 
-class Weapon
+#include "Item.h"
+
+class Weapon : public Item
 {
 public:
+	//Default constructor
+	Weapon();
 
-	//Basic info
-	std::string name;
-	std::string type;
-	std::string description;
+	//Parameter constructor
+	Weapon(std::string newName, std::string newType, std::string newDescription, float newAttackBonus, float newDefenseBonus, float newSpeedBonus);
 
-	//Advanced info
-	float attackBonus;
-	float defenseBonus;
-	float speedBonus;
+	//Destructor
+	~Weapon();
+
+
+private:
+	
+	
+
+	
 
 };
 
