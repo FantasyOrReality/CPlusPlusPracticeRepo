@@ -14,9 +14,30 @@ Area::Area()
 Area::Area(std::string newName, std::string newDescription, Player* newCurrentPlayer)
 	:Thing(newName, newDescription)
 	, currentPlayer(newCurrentPlayer)
+	
 {
 	std::cout << "Area class " << name << " constructed with parameters." << std::endl;
 
+}
+
+void Area::SetNumberOfConnectedAreas(int setterNumOfConnectedAreas)
+{
+	numOfConnectedAreas = setterNumOfConnectedAreas;
+}
+
+int Area::GetNumberOfConnectedAreas()
+{
+	return numOfConnectedAreas;
+}
+
+std::string Area::GetName()
+{
+	return name;
+}
+
+void Area::SetConnectedAreas(std::vector<Area*> connectedAreas)
+{
+	
 }
 
 
@@ -38,6 +59,8 @@ void Area::Go(std::string name, Player& ToGo)
 	
 	
 }*/
+
+
 
 Area::~Area()
 {

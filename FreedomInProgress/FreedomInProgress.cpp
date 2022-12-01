@@ -267,7 +267,7 @@ int main()
 	Player examplePlayer3("TestSubjectC", "The third subject tested to show the capabilities of this world.", 300.0f, 300.0f, 3.0f, 3.0f, 3.0f, nullptr, nullptr, nullptr, nullptr);
 	std::cout << std::endl;
 
-	Area exampleArea1("Tutorial1", "The first tutorial area.", nullptr); 
+	Area exampleArea1("Tutorial1", "The first tutorial area.", nullptr);
 	Area exampleArea2("Tutorial2", "The second tutorial area.", nullptr); 
 	Area exampleArea3("Tutorial3", "The third tutorial area.", nullptr);
 	std::cout << std::endl;
@@ -311,6 +311,22 @@ int main()
 	examplePlayer1.currentArea = &exampleArea1;
 	examplePlayer1.currentArea->Look();
 	*/
+
+	//Pointer for the areas
+	Area* AreaPtr1 = &exampleArea1;
+	Area* AreaPtr2 = &exampleArea2;
+	Area* AreaPtr3 = &exampleArea3;
+
+
+	//Set the number of connected areas
+	exampleArea1.SetNumberOfConnectedAreas(2);
+	exampleArea2.SetNumberOfConnectedAreas(1);
+	exampleArea3.SetNumberOfConnectedAreas(1);
+	
+	for (int i = 0; i < exampleArea1.GetNumberOfConnectedAreas(); i++)
+	{
+		exampleArea1.SetConnectedAreas(AreaPtr2.GetName());
+	}
 
 	//Activate functions
 	//Check the stats of the first monster
