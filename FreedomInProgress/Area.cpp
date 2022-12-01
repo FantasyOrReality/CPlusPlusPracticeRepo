@@ -4,22 +4,23 @@
 #include "Player.h"
 
 Area::Area()
-
+	: Thing("","")
+	, currentPlayer(nullptr)
 {
+	std::cout << "Area class " << name << " constructed by default." << std::endl;
+
 }
 
-Area::Area(std::string newName, std::string newDescription, std::vector<Area*> newConnectedAreas, Player* newCurrentPlayer, std::vector<std::string> newStartingContents, std::vector<std::string> newCurrentContents):
-	Thing(newName, newDescription)
-	, connectedAreas(newConnectedAreas)
+Area::Area(std::string newName, std::string newDescription, Player* newCurrentPlayer)
+	:Thing(newName, newDescription)
 	, currentPlayer(newCurrentPlayer)
-	, startingContents(newStartingContents)
-	, currentContents(newCurrentContents)
 {
+	std::cout << "Area class " << name << " constructed with parameters." << std::endl;
 
 }
 
 
-void Area::Look()
+/*void Area::Look()
 {
 	std::cout << "The current area is named " + name << std::endl;
 	std::cout << " " + description << std::endl;
@@ -30,10 +31,17 @@ void Area::Look()
 		std::cout << connectedAreas[i]->name<< std::endl;
 	}
 
-}
+ }
 
 void Area::Go(std::string name, Player& ToGo)
 {
 	
 	
+}*/
+
+Area::~Area()
+{
+	std::cout << "Area class " << name << " destroyed." << std::endl;
+	std::cout << std::endl;
+
 }

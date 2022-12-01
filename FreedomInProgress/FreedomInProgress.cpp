@@ -262,134 +262,39 @@ int main()
 	//GameIntro();
 
 	//Example instances
-	Player examplePlayer1; 
-	Player examplePlayer2;
-	Player examplePlayer3;
+	Player examplePlayer1("TestSubjectA", "The first subject tested to show the capabilities of this world.", 100.0f, 100.0f, 1.0f, 1.0f, 1.0f, nullptr, nullptr, nullptr, nullptr);
+	Player examplePlayer2("TestSubjectB", "The second subject tested to show the capabilities of this world.", 200.0f, 200.0f, 2.0f, 2.0f, 2.0f, nullptr, nullptr, nullptr, nullptr);
+	Player examplePlayer3("TestSubjectC", "The third subject tested to show the capabilities of this world.", 300.0f, 300.0f, 3.0f, 3.0f, 3.0f, nullptr, nullptr, nullptr, nullptr);
+	std::cout << std::endl;
 
+	Area exampleArea1("Tutorial1", "The first tutorial area.", nullptr); 
+	Area exampleArea2("Tutorial2", "The second tutorial area.", nullptr); 
+	Area exampleArea3("Tutorial3", "The third tutorial area.", nullptr);
+	std::cout << std::endl;
 
-	Area exampleArea1; //define values
-	Area exampleArea2; //define values
-	Area exampleArea3;//define values
-
-	Monster exampleMonster1;
-	Monster exampleMonster2;
-	Monster exampleMonster3;
+	Monster exampleMonster1("Howard", "Your first regular fight, he's quite calm about the situation.", 1000.0f, 1000.0f, 10.0f, 10.0f, 10.0f, "Light Demon");
+	Monster exampleMonster2("Jennifer", "Your second regular fight, she's quite anxious about the situation.", 1000.0f, 1000.0f, 15.0f, 20.0f, 5.0f, "Heavy Demon");
+	Monster exampleMonster3("Cyneck", "Your first Boss fight, they're very excited about the situation.", 20000.0f, 20000.0f, 50.0f, 100.0f, 1.0f, "Boss Demon");
+	std::cout << std::endl;
 
 	Weapon exampleWeapon1("stick", "base melee", "Just a regular stick, made of hard wood", 0.01f, 0.00f, 0.00f);
 	Weapon exampleWeapon2("rod", "base melee", "An old metal rod, scratches and burns cover it.", 0.02f, 0.01f, -0.01f);
 	Weapon exampleWeapon3("sword","special melee","the classic rapier, given to you by your guide.", 0.05f, 0.05f, -0.05f);
+	std::cout << std::endl;
 
 	Armour exampleArmour1("hat", "helmet", "An old, ragged hat. It smells kind bad...", 0.0f, 0.0f, 0.0f);
 	Armour exampleArmour2("cloth", "bodypiece", "An old, ragged cloth. It smells weird...", 0.0f, 0.0f, 0.0f);
 	Armour exampleArmour3("cap", "helmet", "An old, ragged cap. It reminds you of your childhood.", 0.01f, 0.0f, 0.01f);
+	std::cout << std::endl;
 
-	Feature exampleFeature1;
-	Feature exampleFeature2;
-	Feature exampleFeature3;
-
-
-	//Example assignments
-	//Player
-	examplePlayer1.name = "TestSubjectA";
-	examplePlayer1.description = "The first subject tested to show the capabilities of this world.";
-	examplePlayer1.maxHealth = 100;
-	examplePlayer1.baseAttack = 1;
-	examplePlayer1.baseDefense = 1;
-	examplePlayer1.baseSpeed = 1;
-	examplePlayer1.currentWeapon = "stick";
-	examplePlayer1.currentHelmet = "hat";
-	examplePlayer1.currentBodyPiece = "cloth";
-	examplePlayer1.inventory.push_back("stick");
-	examplePlayer1.inventory.push_back("hat");
-	examplePlayer1.inventory.push_back("cloth");
-	examplePlayer1.currentHealth = 100;
-
-	examplePlayer2.name = "TestSubjectB";
-	examplePlayer2.description = "The second subject tested to show the capabilities of this world.";
-	examplePlayer2.maxHealth = 200;
-	examplePlayer2.baseAttack = 2;
-	examplePlayer2.baseDefense = 2;
-	examplePlayer2.baseSpeed = 2;
-	examplePlayer2.currentWeapon = "rod";
-	examplePlayer2.currentHelmet = "cap";
-	examplePlayer2.currentBodyPiece = "scarf";
-	examplePlayer2.inventory.push_back("rod");
-	examplePlayer2.inventory.push_back("cap");
-	examplePlayer2.inventory.push_back("scarf");
-	examplePlayer2.currentHealth = 200;
-
-	examplePlayer3.name = "TestSubjectC";
-	examplePlayer3.description = "The third subject tested to show the capabilities of this world.";
-	examplePlayer3.maxHealth = 300;
-	examplePlayer3.baseAttack = 3;
-	examplePlayer3.baseDefense = 3;
-	examplePlayer3.baseSpeed = 3;
-	examplePlayer3.currentWeapon = "sword";
-	examplePlayer3.currentHelmet = "bucket";
-	examplePlayer3.currentBodyPiece = "bodysuit";
-	examplePlayer3.inventory.push_back("sword");
-	examplePlayer3.inventory.push_back("bucket");
-	examplePlayer3.inventory.push_back("bodysuit");
-	examplePlayer3.currentHealth = 300;
-
-	//Area
-	/*exampleArea1.name = "Tutorial1";
-	exampleArea1.description = "The first tutorial area";
-	exampleArea1.startingContents.push_back("table");
-	exampleArea1.currentContents.push_back("table");
-
-	exampleArea2.name = "Tutorial2";
-	exampleArea2.description = "The second tutorial area";
-	exampleArea2.startingContents.push_back("chair");
-	exampleArea2.currentContents.push_back("chair");
-
-	exampleArea3.name = "Tutorial3";
-	exampleArea3.description = "The third tutorial area";
-	exampleArea3.startingContents.push_back("lamp");
-	exampleArea3.currentContents.push_back("lamp");
-	*/
-
-	//Monster
-	exampleMonster1.name = "Howard";
-	exampleMonster1.type = "Light Demon";
-	exampleMonster1.description = "Your first regular fight, he's quite calm about the situation";
-	exampleMonster1.attack = 10;
-	exampleMonster1.defense = 10;
-	exampleMonster1.speed = 10;
-	exampleMonster1.maxHealth = 1000;
-	exampleMonster1.currentHealth = 1000;
-
-	exampleMonster2.name = "Jennifer";
-	exampleMonster2.type = "Heavy Demon";
-	exampleMonster2.description = "Your second regular fight, she's quite anxious about the situation";
-	exampleMonster2.attack = 20;
-	exampleMonster2.defense = 20;
-	exampleMonster2.speed = 20;
-	exampleMonster2.maxHealth = 2000;
-	exampleMonster2.currentHealth = 2000;
-
-	exampleMonster3.name = "Cyneck";
-	exampleMonster3.type = "Boss Demon";
-	exampleMonster3.description = "Your first Boss fight, they're very excited about the situation";
-	exampleMonster3.attack = 100;
-	exampleMonster3.defense = 100;
-	exampleMonster3.speed = 30;
-	exampleMonster3.maxHealth = 30000;
-	exampleMonster3.currentHealth = 30000;
-
-	
-	//Feature
-	exampleFeature1.name = "Combat";
-	exampleFeature1.description = "Combat is the basic fighting mode, it is done to clear areas of monsters.";
-
-	exampleFeature2.name = "Lock opening";
-	exampleFeature2.description = "Lock opening is a feature used to pass locked doors.";
-
-	exampleFeature3.name = "Item grabbing";
-	exampleFeature3.description = "Item grabbing is a feature used when moving physical objects from the world into the inventory as an item.";
+	Feature exampleFeature1("Combat", "Combat is the basic fighting mode, it is done to clear areas of monsters.");
+	Feature exampleFeature2("Lock opening", "Lock opening is a feature used to pass locked doors.");
+	Feature exampleFeature3("Item grabbing", "Item grabbing is a feature used when moving physical objects from the world into the inventory as an item.");
+	std::cout << std::endl;
 
 	//Connect all areas
 	//Area 1
+	/*
 	exampleArea1.connectedAreas.push_back(&exampleArea2);
 	exampleArea1.connectedAreas.push_back(&exampleArea3);
 
@@ -405,6 +310,24 @@ int main()
 	//Move to an area
 	examplePlayer1.currentArea = &exampleArea1;
 	examplePlayer1.currentArea->Look();
+	*/
+
+	//Activate functions
+	//Check the stats of the first monster
+	exampleMonster1.Look();
+
+	//Check the stats of the second monster
+	exampleMonster2.Look();
+
+	//Check the stats of the third monster
+	exampleMonster3.Look();
+
+
+	//Damage the first monster
+	exampleMonster1.Harmed();
+
+	//Heal the first monster
+	exampleMonster1.Heal();
 
 
 }

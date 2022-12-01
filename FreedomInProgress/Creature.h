@@ -11,7 +11,17 @@ public:
     Creature();
 
     //Parameter constructor
-    Creature();
+    Creature(std::string newName, std::string newDescription, float newMaxhealth, float newCurrentHealth, float newBaseAttack, float newBaseDefense, float newBaseSpeed);
+
+    //Functions
+    //Function for printing creature stats
+    void Look();
+
+    //Function for gaining health
+    void Heal();
+
+    //Function for taking damage
+    void Harmed();
 
     //Destructor
     ~Creature();

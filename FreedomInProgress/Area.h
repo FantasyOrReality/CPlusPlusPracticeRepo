@@ -15,12 +15,16 @@ public:
 	Area();
 
 	//Parameter Constructor
-	Area(std::string newName, std::string newDescription, std::vector<Area*> newConnectedAreas, Player* newCurrentPlayer, std::vector<std::string> newStartingContents, std::vector<std::string> newCurrentContents);
+	Area(std::string newName, std::string newDescription,  Player* newCurrentPlayer);
 
 	//Functions
 	void Look();
 	void Go(std::string name, Player& ToGo); //Change the current area
 
+	//Destructor
+	~Area();
+
+private:
 	//Basic info
 	std::vector<Area*> connectedAreas;
 	Player* currentPlayer;

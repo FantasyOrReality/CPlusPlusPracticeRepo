@@ -1,23 +1,27 @@
 #pragma once
 
 #include <string>
-class Monster
+
+#include "Creature.h"
+
+class Monster : public Creature
 {
 public:
+	//Default Constructor
+	Monster();
 
+	//Parameter Constructor
+	Monster(std::string newName, std::string newDescription, float newMaxhealth, float newCurrentHealth, float newBaseAttack, float newBaseDefense, float newBaseSpeed,std::string newType);
+
+	//Destructor
+	~Monster();
+private:
 	//Basic info
-	std::string name;
 	std::string type;
-	std::string description;
 
 	//Advanced info
-	int attack;
-	int defense;
-	int speed;
-	int maxHealth;
 
 	//Current State
-	int currentHealth;
 
 };
 
