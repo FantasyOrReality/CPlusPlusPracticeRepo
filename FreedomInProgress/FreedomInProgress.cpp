@@ -267,9 +267,9 @@ int main()
 	Player examplePlayer3("TestSubjectC", "The third subject tested to show the capabilities of this world.", 300.0f, 300.0f, 3.0f, 3.0f, 3.0f, nullptr, nullptr, nullptr, nullptr);
 	std::cout << std::endl;
 
-	Area exampleArea1("Tutorial1", "The first tutorial area.", nullptr);
-	Area exampleArea2("Tutorial2", "The second tutorial area.", nullptr); 
-	Area exampleArea3("Tutorial3", "The third tutorial area.", nullptr);
+	Area exampleArea1("Tutorial1", "The first tutorial area.", nullptr, 2);
+	Area exampleArea2("Tutorial2", "The second tutorial area.", nullptr, 1); 
+	Area exampleArea3("Tutorial3", "The third tutorial area.", nullptr, 1);
 	std::cout << std::endl;
 
 	Monster exampleMonster1("Howard", "Your first regular fight, he's quite calm about the situation.", 1000.0f, 1000.0f, 10.0f, 10.0f, 10.0f, "Light Demon");
@@ -292,41 +292,18 @@ int main()
 	Feature exampleFeature3("Item grabbing", "Item grabbing is a feature used when moving physical objects from the world into the inventory as an item.");
 	std::cout << std::endl;
 
-	//Connect all areas
-	//Area 1
-	/*
-	exampleArea1.connectedAreas.push_back(&exampleArea2);
-	exampleArea1.connectedAreas.push_back(&exampleArea3);
-
-	//Area 2
-	exampleArea2.connectedAreas.push_back(&exampleArea1);
-
-	//Area 3
-	exampleArea3.connectedAreas.push_back(&exampleArea1);
-
-
-	//Make your character
-
-	//Move to an area
-	examplePlayer1.currentArea = &exampleArea1;
-	examplePlayer1.currentArea->Look();
-	*/
-
 	//Pointer for the areas
 	Area* AreaPtr1 = &exampleArea1;
 	Area* AreaPtr2 = &exampleArea2;
 	Area* AreaPtr3 = &exampleArea3;
 
+	//Connect areas
+	AreaPtr1->AddConnectedArea(AreaPtr2);
+	AreaPtr1->AddConnectedArea(AreaPtr3);
+	AreaPtr2->AddConnectedArea(AreaPtr1);
+	AreaPtr3->AddConnectedArea(AreaPtr1);
 
-	//Set the number of connected areas
-	exampleArea1.SetNumberOfConnectedAreas(2);
-	exampleArea2.SetNumberOfConnectedAreas(1);
-	exampleArea3.SetNumberOfConnectedAreas(1);
-	
-	for (int i = 0; i < exampleArea1.GetNumberOfConnectedAreas(); i++)
-	{
-		exampleArea1.SetConnectedAreas(AreaPtr2.GetName());
-	}
+
 
 	//Activate functions
 	//Check the stats of the first monster

@@ -15,7 +15,7 @@ public:
 	Area();
 
 	//Parameter Constructor
-	Area(std::string newName, std::string newDescription, Player* newCurrentPlayer);
+	Area(std::string newName, std::string newDescription, Player* newCurrentPlayer, int newNumOfConnectedAreas);
 
 	//Setter for number of connected areas
 	void SetNumberOfConnectedAreas(int setNumOfConnectedAreas);
@@ -24,7 +24,8 @@ public:
 	int GetNumberOfConnectedAreas();//number of connected areas
 	std::string GetName();
 	//Setter for connected areas
-	void SetConnectedAreas(std::vector<Area*> connectedAreas);
+	void SetConnectedAreas(std::vector<Area*> setterConnectedAreas);
+	void AddConnectedArea(Area* areaToConnect);
 
 	//Functions
 	void Look();
