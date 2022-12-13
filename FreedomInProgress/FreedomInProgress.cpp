@@ -7,12 +7,14 @@
 #include<vector>
 
 #include "Thing.h"
-#include "Player.h"
-#include "Area.h"
-#include "Monster.h"
+	#include "Player.h"
+	#include "Monster.h"
+
+	#include "Area.h"
 #include "Item.h"
 #include "Weapon.h"
 #include "Armour.h"
+#include "Potion.h"
 #include "Feature.h"
 
 
@@ -291,6 +293,12 @@ int main()
 	Feature exampleFeature2("Lock opening", "Lock opening is a feature used to pass locked doors.");
 	Feature exampleFeature3("Item grabbing", "Item grabbing is a feature used when moving physical objects from the world into the inventory as an item.");
 	std::cout << std::endl;
+
+	Potion HealingPotion("", "", "", 0.00f, 0.00f, 0.00f, 0.00f);
+	Potion DamagePotion("", "", "", 0.00f, 0.00f, 0.00f, 0.00f);
+	Potion SpeedPotion("", "", "", 0.00f, 0.00f, 0.00f, 0.00f);
+	std::cout << std::endl;
+
 
 	//Pointer for the areas
 	Area* AreaPtr1 = &exampleArea1;

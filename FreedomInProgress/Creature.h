@@ -20,6 +20,9 @@ public:
     //Function for gaining health
     void Heal();
 
+    //Function for doing damage
+    void Attacking();
+
     //Function for taking damage
     void Harmed();
 

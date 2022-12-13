@@ -12,7 +12,8 @@ public:
 	Thing(std::string newName, std::string newDescription);
 
 	//Functions
-	void Look();
+	virtual void Look() = 0;
+
 
 	//Destructor
 	~Thing();

@@ -16,6 +16,10 @@ Armour::Armour(std::string newName, std::string newType, std::string newDescript
 	std::cout << "Armour class " << name << " constructed with parameters." << std::endl;
 }
 
+void Armour::Use()
+{
+}
+
 Armour::~Armour()
 {
 	std::cout << "Armour class " << name << " destroyed." << std::endl;

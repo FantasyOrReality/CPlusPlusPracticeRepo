@@ -18,10 +18,6 @@ Thing::Thing(std::string newName, std::string newDescription)
 
 }
 
-void Thing::Look()
-{
-}
-
 Thing::~Thing()
 {
 	std::cout << "Thing class " << name << " destroyed." << std::endl;

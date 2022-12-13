@@ -19,10 +19,18 @@ public:
 
 	//Parameter Constructor
 	Player(std::string newName, std::string newDescription, float newMaxhealth, float newCurrentHealth, float newBaseAttack, float newBaseDefense, float newBaseSpeed, Weapon* newCurrentWeapon, Armour* newCurrentHelmet, Armour* newCurrentBodyPiece, Area* newCurrentArea);
+	
+	
 	//Fuctions
+	//Getters
+	float DamageCalculator(); //Gets the total damage dealt by an attack
+
+	//Setters
+	void SetCurrentWeapon(Weapon* setterCurrentWeapon);
 
 	//Destructor
 	~Player();
+
 private:
 	//Data
 	//Basic info

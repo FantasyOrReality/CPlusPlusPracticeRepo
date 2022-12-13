@@ -13,6 +13,8 @@ public:
 	//Parameter Constructor
 	Armour(std::string newName, std::string newType, std::string newDescription, float newAttackBonus, float newDefenseBonus, float newSpeedBonus);
 
+	//Functions
+	void Use();
 
 	//Destructor
 	~Armour();

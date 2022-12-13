@@ -19,6 +19,15 @@ Weapon::Weapon(std::string newName, std::string newType, std::string newDescript
 
 }
 
+float Weapon::GetAttackBonus()
+{
+	return attackBonus;
+}
+
+void Weapon::Use()
+{
+}
+
 Weapon::~Weapon()
 {
 	std::cout << "Weapon class " << name << " destroyed." << std::endl;

@@ -9,12 +9,13 @@ public:
 
 	//Parameter Constructor
 	Item(std::string newName, std::string newType, std::string newDescription, float newAttackBonus, float newDefenseBonus, float newSpeedBonus);
+	
 	//Getters
 
 	//Setters
 
 	//Functions
-
+	virtual void Use() = 0;
 
 	//Destructor
 	~Item();

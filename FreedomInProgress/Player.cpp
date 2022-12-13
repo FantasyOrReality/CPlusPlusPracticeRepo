@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "Player.h"
+#include "Weapon.h"
 
 Player::Player()
 	: Creature("", "", 0.0f, 0.0f, 0.0f, 0.0f, 0.0f)
@@ -23,6 +24,23 @@ Player::Player(std::string newName, std::string newDescription, float newMaxheal
 {
 	std::cout << "Player class " << name << " constructed with parameters." << std::endl;
 
+}
+
+float Player::DamageCalculator()
+{
+	float attackDamage;
+	float attackBonus;
+
+	attackBonus = currentWeapon->GetAttackBonus();
+
+	attackDamage = baseAttack*attackBonus;
+
+	return attackDamage;
+}
+
+void Player::SetCurrentWeapon(Weapon* setterCurrentWeapon)
+{
+	currentWeapon = setterCurrentWeapon;
 }
 
 Player::~Player()
