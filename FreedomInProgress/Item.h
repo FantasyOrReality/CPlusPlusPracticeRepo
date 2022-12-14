@@ -15,7 +15,7 @@ public:
 	//Setters
 
 	//Functions
-	virtual void Use() = 0;
+	void Use();
 
 	//Destructor
 	~Item();

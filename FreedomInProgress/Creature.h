@@ -24,8 +24,10 @@ public:
     void Attacking();
 
     //Function for taking damage
-    void Harmed();
+    void Harmed(float Damage);
 
+    //Getters
+    std::string GetName();
     //Destructor
     ~Creature();
 

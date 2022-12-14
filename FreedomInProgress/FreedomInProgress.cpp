@@ -264,39 +264,46 @@ int main()
 	//GameIntro();
 
 	//Example instances
+	//Format: Name, Description, Maximum health, Current health, Base attack damage, Base defense, Base speed, Current held weapon, Current worn helmet, Current worn body armour, Current occupied area
 	Player examplePlayer1("TestSubjectA", "The first subject tested to show the capabilities of this world.", 100.0f, 100.0f, 1.0f, 1.0f, 1.0f, nullptr, nullptr, nullptr, nullptr);
-	Player examplePlayer2("TestSubjectB", "The second subject tested to show the capabilities of this world.", 200.0f, 200.0f, 2.0f, 2.0f, 2.0f, nullptr, nullptr, nullptr, nullptr);
-	Player examplePlayer3("TestSubjectC", "The third subject tested to show the capabilities of this world.", 300.0f, 300.0f, 3.0f, 3.0f, 3.0f, nullptr, nullptr, nullptr, nullptr);
+	Player examplePlayer2("TestSubjectB", "The second subject tested to show the capabilities of this world.", 100.0f, 100.0f, 1.0f, 1.0f, 1.0f, nullptr, nullptr, nullptr, nullptr);
+	Player examplePlayer3("TestSubjectC", "The third subject tested to show the capabilities of this world.", 100.0f, 100.0f, 1.0f, 1.0f, 1.0f, nullptr, nullptr, nullptr, nullptr);
 	std::cout << std::endl;
 
+	//Format: Name, Description, Current contained player, Number of connected areas
 	Area exampleArea1("Tutorial1", "The first tutorial area.", nullptr, 2);
 	Area exampleArea2("Tutorial2", "The second tutorial area.", nullptr, 1); 
 	Area exampleArea3("Tutorial3", "The third tutorial area.", nullptr, 1);
 	std::cout << std::endl;
 
+	//Format: Name, Description, Maximum health, Current health, Base attack damage, Base defense, Base speed, Type of monster
 	Monster exampleMonster1("Howard", "Your first regular fight, he's quite calm about the situation.", 1000.0f, 1000.0f, 10.0f, 10.0f, 10.0f, "Light Demon");
 	Monster exampleMonster2("Jennifer", "Your second regular fight, she's quite anxious about the situation.", 1000.0f, 1000.0f, 15.0f, 20.0f, 5.0f, "Heavy Demon");
 	Monster exampleMonster3("Cyneck", "Your first Boss fight, they're very excited about the situation.", 20000.0f, 20000.0f, 50.0f, 100.0f, 1.0f, "Boss Demon");
 	std::cout << std::endl;
 
-	Weapon exampleWeapon1("stick", "base melee", "Just a regular stick, made of hard wood", 0.01f, 0.00f, 0.00f);
-	Weapon exampleWeapon2("rod", "base melee", "An old metal rod, scratches and burns cover it.", 0.02f, 0.01f, -0.01f);
-	Weapon exampleWeapon3("sword","special melee","the classic rapier, given to you by your guide.", 0.05f, 0.05f, -0.05f);
+	//Format: Name, Weapon type, Description, Percentage attack bonus, Percentage defense bonus, Percentage speed bonus
+	Weapon exampleWeapon1("stick", "base melee", "Just a regular stick, made of hard wood", 1.01f, 1.00f, 1.00f, nullptr, nullptr);
+	Weapon exampleWeapon2("rod", "base melee", "An old metal rod, scratches and burns cover it.", 1.02f, 1.01f, 0.99f, nullptr, nullptr);
+	Weapon exampleWeapon3("sword","special melee","the classic rapier, given to you by your guide.", 0.05f, 0.05f, 0.95f, nullptr, nullptr);
 	std::cout << std::endl;
 
-	Armour exampleArmour1("hat", "helmet", "An old, ragged hat. It smells kind bad...", 0.0f, 0.0f, 0.0f);
-	Armour exampleArmour2("cloth", "bodypiece", "An old, ragged cloth. It smells weird...", 0.0f, 0.0f, 0.0f);
-	Armour exampleArmour3("cap", "helmet", "An old, ragged cap. It reminds you of your childhood.", 0.01f, 0.0f, 0.01f);
+	//Format: Name, Armour type, Description, Percentage attack bonus, Percentage defense bonus, Percentage speed bonus
+	Armour exampleArmour1("hat", "helmet", "An old, ragged hat. It smells kind bad...", 1.0f, 1.0f, 1.0f);
+	Armour exampleArmour2("cloth", "bodypiece", "An old, ragged cloth. It smells weird...", 1.0f, 1.0f, 1.0f);
+	Armour exampleArmour3("cap", "helmet", "An old, ragged cap. It reminds you of your childhood.", 1.01f, 1.0f, 1.01f);
 	std::cout << std::endl;
 
+	//Format: Name, Description
 	Feature exampleFeature1("Combat", "Combat is the basic fighting mode, it is done to clear areas of monsters.");
 	Feature exampleFeature2("Lock opening", "Lock opening is a feature used to pass locked doors.");
 	Feature exampleFeature3("Item grabbing", "Item grabbing is a feature used when moving physical objects from the world into the inventory as an item.");
 	std::cout << std::endl;
 
-	Potion HealingPotion("", "", "", 0.00f, 0.00f, 0.00f, 0.00f);
-	Potion DamagePotion("", "", "", 0.00f, 0.00f, 0.00f, 0.00f);
-	Potion SpeedPotion("", "", "", 0.00f, 0.00f, 0.00f, 0.00f);
+	//Format: Name, Description, Percentage attack bonus, Percentage defense bonus, Percentage speed bonus, Health added
+	Potion HealingPotion("", "", "", 1.00f, 1.00f, 1.00f, 100.00f);
+	Potion DamagePotion("", "", "", 1.00f, 1.00f, 1.00f, -50.00f);
+	Potion SpeedPotion("", "", "", 1.00f, 1.00f, 1.50f, 0.00f);
 	std::cout << std::endl;
 
 
@@ -311,6 +318,10 @@ int main()
 	AreaPtr2->AddConnectedArea(AreaPtr1);
 	AreaPtr3->AddConnectedArea(AreaPtr1);
 
+	//PopulateAreas with monsters
+	AreaPtr1->PopulateAreaWithMonsters(&exampleMonster1);
+	AreaPtr2->PopulateAreaWithMonsters(&exampleMonster2);
+	AreaPtr3->PopulateAreaWithMonsters(&exampleMonster3);
 
 
 	//Activate functions

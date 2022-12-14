@@ -47,6 +47,16 @@ void Area::AddConnectedArea(Area* areaToConnect)
 	connectedAreas.push_back(areaToConnect);
 }
 
+void Area::PopulateAreaWithMonsters(Monster* sendMonster)
+{
+	ContainedMonsters.push_back(sendMonster);
+}
+
+Monster* Area::GetMonster(std::string name)
+{
+	return ;
+}
+
 void Area::Look()
 {
 	/*std::cout << "The current area is named " + name << std::endl;

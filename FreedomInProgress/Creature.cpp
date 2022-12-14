@@ -58,15 +58,15 @@ void Creature::Heal()
 
 }
 
-void Creature::Harmed()
+void Creature::Harmed(float Damage)
 {
 	//Check the damage amount. Soon, this will be checked through weapon stats and defense stats
-	float DamageTaken;
-	std::cout << "How much damage was taken?" << std::endl<< std::endl;
-	std::cin >> DamageTaken;
+	//float DamageTaken;
+	//std::cout << "How much damage was taken?" << std::endl<< std::endl;
+	//std::cin >> DamageTaken;
 
 	//Damage the creature
-	currentHealth = currentHealth - DamageTaken;
+	currentHealth -= Damage;
 
 	//Make sure the stats don't become negative
 	if (currentHealth < 0)
@@ -78,6 +78,11 @@ void Creature::Harmed()
 	std::cout << name << "'s max health is " << maxHealth << "." << std::endl;
 	std::cout << name << "'s current health is now " << currentHealth << "." << std::endl << std::endl;
 
+}
+
+std::string Creature::GetName()
+{
+	return this->name;
 }
 
 Creature::~Creature()

@@ -27,6 +27,12 @@ Item::Item(std::string newName, std::string newType, std::string newDescription,
 
 }
 
+void Item::Use()
+{
+	//default use function
+
+}
+
 Item::~Item()
 {
 	std::cout << "Item class " << name << " destroyed." << std::endl;

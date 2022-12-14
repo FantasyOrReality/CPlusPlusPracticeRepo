@@ -5,6 +5,8 @@
 
 #include "Thing.h"
 
+class Monster;
+
 class Area : public Thing
 {
 public:
@@ -23,9 +25,16 @@ public:
 	//Getters
 	int GetNumberOfConnectedAreas();//number of connected areas
 	std::string GetName();
+
+	//Setters
 	//Setter for connected areas
 	void SetConnectedAreas(std::vector<Area*> setterConnectedAreas);
 	void AddConnectedArea(Area* areaToConnect);
+
+	//Set up the contained monsters
+	void PopulateAreaWithMonsters(Monster* sendMonster);
+
+	Monster* GetMonster(std::string name);
 
 	//Functions
 	void Look();
@@ -40,6 +49,8 @@ private:
 	int numOfConnectedAreas;
 	std::vector<Area*> connectedAreas;
 	Player* currentPlayer;
+	std::vector<Monster*> ContainedMonsters;
+
 
 	//Advanced info
 	std::vector<std::string> startingContents;
