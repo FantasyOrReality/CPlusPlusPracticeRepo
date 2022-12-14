@@ -34,7 +34,7 @@ public:
 	//Set up the contained monsters
 	void PopulateAreaWithMonsters(Monster* sendMonster);
 
-	Monster* GetMonster(std::string name);
+	Monster* GetMonster(std::string monsterName);
 
 	//Functions
 	void Look();

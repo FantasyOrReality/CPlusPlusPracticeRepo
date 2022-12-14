@@ -2,6 +2,7 @@
 
 #include "Area.h"
 #include "Player.h"
+#include "Monster.h"
 
 Area::Area()
 	: Thing("","")
@@ -52,9 +53,20 @@ void Area::PopulateAreaWithMonsters(Monster* sendMonster)
 	ContainedMonsters.push_back(sendMonster);
 }
 
-Monster* Area::GetMonster(std::string name)
+Monster* Area::GetMonster(std::string monsterName)
 {
-	return ;
+	for (int i = 0; i < ContainedMonsters.size(); ++i)
+	{
+		if (monsterName = ContainedMonsters[i]->GetName())
+		{
+			return ContainedMonsters[i];
+		}
+		else
+		{
+			return nullptr;
+		}
+	}
+	
 }
 
 void Area::Look()
